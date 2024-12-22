@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Реєстрація</title>
+    <link rel="stylesheet" href="/auth/styles.css" />
+  </head>
+  <body>
+    <!-- Початкова сторінка реєстрації -->
+    <div class="container" id="mainContainer">
+      <h2>Реєстрація</h2>
+      <p>Виберіть, будь ласка, роль:</p>
+      <button id="chooseMaster">Майстер</button>
+      <button id="chooseUser">Користувач</button>
+    </div>
+
+    <!-- Модальне вікно для майстра -->
+    <div id="masterModal" class="modal">
+      <div class="modal-content">
+        <label for="fullname"> ПІБ:</label>
+        <input type="text" id="fullname" name="fullname" required /><br />
+
+        <label for="phone">Номер телефону:</label>
+        <input type="tel" id="phone" name="phone" required /><br />
+
+        <label for="district">Район Житомира:</label>
+        <select id="district" name="district" required>
+          <option value="" disabled selected>Оберіть район</option>
+          <option value="bogunsky">Богунський</option>
+          <option value="korolyovsky">Корольовський</option>
+        </select>
+        <br />
+
+        <label for="email">Електронна пошта:</label>
+        <input type="email" id="email" name="email" required /><br />
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required /><br />
+
+        <label for="nickname">Нікнейм:</label>
+        <input type="text" id="nickname" name="nickname" required /><br />
+
+        <h4>Послуги, які ви можете надавати:</h4>
+        <label>
+          <input
+            type="checkbox"
+            id="service1"
+            name="services"
+            value="Діагностика двигуна"
+          />
+          Діагностика двигуна </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service2"
+            name="services"
+            value="Ремонт трансмісії"
+          />
+          Ремонт трансмісії </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service3"
+            name="services"
+            value="Заміна гальмівних дисків"
+          />
+          Заміна гальмівних дисків </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service4"
+            name="services"
+            value="Ремонт кондиціонера"
+          />
+          Ремонт кондиціонера </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service5"
+            name="services"
+            value="Заміна масла"
+          />
+          Заміна масла </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service6"
+            name="services"
+            value="Ремонт підвіски"
+          />
+          Ремонт підвіски </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service7"
+            name="services"
+            value="Заміна свічок запалювання"
+          />
+          Заміна свічок запалювання </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service8"
+            name="services"
+            value="Покраска автомобіля"
+          />
+          Покраска автомобіля </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service9"
+            name="services"
+            value="Ремонт електричних систем"
+          />
+          Ремонт електричних систем </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service10"
+            name="services"
+            value="Охолодження двигуна"
+          />
+          Охолодження двигуна </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service11"
+            name="services"
+            value="Заміна фільтру"
+          />
+          Заміна фільтру </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service12"
+            name="services"
+            value="Ремонт стартера"
+          />
+          Ремонт стартера </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service13"
+            name="services"
+            value="Ремонт електродвигуна"
+          />
+          Ремонт електродвигуна </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service14"
+            name="services"
+            value="Перевірка системи живлення"
+          />
+          Перевірка системи живлення </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service15"
+            name="services"
+            value="Проблеми з акумулятором"
+          />
+          Проблеми з акумулятором </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service16"
+            name="services"
+            value="Ремонт вихлопної системи"
+          />
+          Ремонт вихлопної системи </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service17"
+            name="services"
+            value="Заміна ременя"
+          />
+          Заміна ременя </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service18"
+            name="services"
+            value="Перевірка системи охолодження"
+          />
+          Перевірка системи охолодження </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service19"
+            name="services"
+            value="Ремонт підшипників"
+          />
+          Ремонт підшипників </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service20"
+            name="services"
+            value="Ремонт системи підйому"
+          />
+          Ремонт системи підйому </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service21"
+            name="services"
+            value="Ремонт рульового управління"
+          />
+          Ремонт рульового управління </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service22"
+            name="services"
+            value="Заміна гальмівної рідини"
+          />
+          Заміна гальмівної рідини </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service23"
+            name="services"
+            value="Ремонт паливної системи"
+          />
+          Ремонт паливної системи </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service24"
+            name="services"
+            value="Заміна амортизаторів"
+          />
+          Заміна амортизаторів </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service25"
+            name="services"
+            value="Ремонт системи запалювання"
+          />
+          Ремонт системи запалювання </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service26"
+            name="services"
+            value="Проблеми з трансмісією"
+          />
+          Проблеми з трансмісією </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service27"
+            name="services"
+            value="Ремонт кузова"
+          />
+          Ремонт кузова </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service28"
+            name="services"
+            value="Ремонт фар"
+          />
+          Ремонт фар </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service29"
+            name="services"
+            value="Заміна гальмівних колодок"
+          />
+          Заміна гальмівних колодок </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service30"
+            name="services"
+            value="Ремонт двигуна"
+          />
+          Ремонт двигуна </label
+        ><br />
+        <label>
+          <input
+            type="checkbox"
+            id="service31"
+            name="services"
+            value="Ремонт системи випуску газів"
+          />
+          Ремонт системи випуску газів </label
+        ><br />
+        <button type="button" class="modal-button" id="submitMasterInfo">
+          Підтвердити
+        </button>
+      </div>
+    </div>
+
+    <!-- Модальне вікно для користувача -->
+    <div id="userModal" class="modal">
+      <div class="modal-content">
+        <h3>Заповніть форму реєстрації для користувача</h3>
+        <form id="userForm">
+          <label for="username">Ім'я:</label>
+          <input type="text" id="username" name="username" required /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required /><br />
+
+          <label for="password">Пароль:</label>
+          <input type="password" id="password" name="password" required /><br />
+
+          <button type="submit" class="modal-button">Зареєструватися</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="/auth/script.js"></script>
+  </body>
+</html>
