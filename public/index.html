@@ -21,7 +21,7 @@
         <ul class="nav-links">
           <li><a href="#home" class="nav-link">Головна</a></li>
           <li><a href="#services" class="nav-link">Послуги</a></li>
-          <li><a href="#masters" class="nav-link">Майстри</a></li>
+          <li><a href="#masters-container" class="nav-link">Майстри</a></li>
           <li><a href="#contact" class="nav-link">Контакти</a></li>
         </ul>
         <div class="working-hours">
@@ -61,12 +61,14 @@
         <div class="services-grid" id="services-list"></div>
       </section>
 
-      <div id="masters-container">
-        <h2>Список майстрів</h2>
-        <ul id="masters-list"></ul>
+      <!-- Заголовок блоку "Наші майстри" -->
+      <div id="masters-section">
+        <h2>Наші Майстри</h2>
+        <div id="masters-container">
+          <!-- Тут будуть відображатись майстри -->
+        </div>
       </div>
-      
-      
+
       <section id="contact" class="contact">
         <h2 class="section-title">Залишити заявку</h2>
         <form id="contact-form" class="contact-form">
@@ -86,7 +88,7 @@
             <textarea name="problem" id="problem" required></textarea>
             <label for="problem">Опишіть проблему</label>
           </div>
-          
+
           <div class="form-container">
             <div class="form-group">
               <select name="district" id="district" class="styled-select">
@@ -101,7 +103,7 @@
               </select>
             </div>
           </div>
-          
+
           <!-- Модальне вікно -->
           <div id="modal" class="modal">
             <div class="modal-content">
@@ -109,7 +111,7 @@
               <p id="modal-message">Ви обрали:</p>
             </div>
           </div>
-          
+
           <button type="submit" class="btn btn-submit">Відправити</button>
         </form>
       </section>
@@ -132,12 +134,17 @@
         </div>
       </section>
 
-      <section id="profile-page" class="profile-page" style="display: none;">
+      <section id="profile-page" class="profile-page" style="display: none">
         <div class="profile-content">
           <h2>Мій профіль</h2>
           <p><strong>Ім'я:</strong> <span id="user-name">Іван Іванов</span></p>
-          <p><strong>Email:</strong> <span id="user-email">ivan@example.com</span></p>
-          <p><strong>Телефон:</strong> <span id="user-phone">+380123456789</span></p>
+          <p>
+            <strong>Email:</strong>
+            <span id="user-email">ivan@example.com</span>
+          </p>
+          <p>
+            <strong>Телефон:</strong> <span id="user-phone">+380123456789</span>
+          </p>
           <button id="edit-profile-btn" class="btn">Редагувати профіль</button>
         </div>
       </section>
@@ -163,7 +170,9 @@
         <div class="footer-section">
           <h3>Слідкуйте за нами</h3>
           <div class="social-icons">
-            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
             <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
           </div>

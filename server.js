@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const app = express();
-const port = 3000;
+const port = 3001;
 
 // Ініціалізація JSON-файлів
 const initializeFile = (fileName) => {
@@ -12,6 +12,7 @@ const initializeFile = (fileName) => {
 };
 initializeFile('masters.json');
 initializeFile('users.json');
+initializeFile('analytics.json');
 
 // Додавання статичних файлів
 app.use('/auth', express.static(path.join(__dirname, 'auth')));
@@ -25,9 +26,26 @@ app.get('/', (req, res) => {
 // Обробка JSON-запитів
 app.use(express.json());
 
+// Функція для перекладу району на українську
+function translateDistrict(district) {
+  const districts = {
+    "korolyovsky": "Корольовський",
+    "bogunsky": "Богунський",
+    // Додайте інші переклади тут
+  };
+
+  return districts[district.toLowerCase()] || district; // Якщо район не знайдений, залишаємо оригінальний
+}
+
 // POST: Реєстрація користувачів та майстрів
 app.post('/register', (req, res) => {
   const userData = req.body;
+
+  // Переклад району на українську, якщо він вказаний латиницею
+  if (userData.district) {
+    userData.district = translateDistrict(userData.district);
+  }
+
   const fileName = userData.services ? 'masters.json' : 'users.json';
 
   fs.readFile(fileName, (err, data) => {
@@ -43,12 +61,26 @@ app.post('/register', (req, res) => {
         console.error('Помилка при запису:', err);
         return res.status(500).send({ message: 'Помилка при запису даних.' });
       }
-      
+
       // Відправляємо статус з повідомленням, щоб клієнт знав про успішну реєстрацію
       res.status(200).send({ message: 'Дані успішно збережено!' });
     });
   });
 });
+
+// GET: Отримання майстрів із файлу masters.json
+app.get('/masters', (req, res) => {
+  fs.readFile('masters.json', 'utf8', (err, data) => {
+    if (err) {
+      console.error('Помилка читання файлу masters.json:', err);
+      return res.status(500).send({ message: 'Не вдалося завантажити майстрів.' });
+    }
+
+    const masters = JSON.parse(data);
+    res.status(200).send(masters);
+  });
+});
+
 // Функція для запису аналітики в файл
 function logAnalytics(data) {
   fs.readFile('analytics.json', (err, jsonData) => {
@@ -58,7 +90,7 @@ function logAnalytics(data) {
     }
 
     analytics.push(data);
-    
+
     fs.writeFile('analytics.json', JSON.stringify(analytics, null, 2), (err) => {
       if (err) {
         console.error('Error writing analytics data', err);
@@ -80,6 +112,7 @@ app.use((req, res, next) => {
   logAnalytics(analyticsData);
   next();
 });
+
 // Запуск сервера
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
