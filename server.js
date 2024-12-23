@@ -13,6 +13,7 @@ const initializeFile = (fileName) => {
 initializeFile('masters.json');
 initializeFile('users.json');
 initializeFile('analytics.json');
+initializeFile('CursorMovement.json'); // Додаємо ініціалізацію для CursorMovement.json
 
 // Додавання статичних файлів
 app.use('/auth', express.static(path.join(__dirname, 'auth')));
@@ -113,6 +114,45 @@ app.use((req, res, next) => {
   next();
 });
 
+// Обробка даних про рух курсора
+app.post('/api/track-actions', (req, res) => {
+  const actions = req.body.actions;
+  
+  // Читаємо наявний файл JSON для курсорних даних
+  fs.readFile('CursorMovement.json', 'utf8', (err, data) => {
+    if (err) {
+      console.error('Помилка читання файлу:', err);
+      return;
+    }
+    
+    // Якщо файл порожній, створюємо масив, в іншому випадку парсимо дані
+    let existingData = data ? JSON.parse(data) : [];
+    
+    // Додаємо нові дії до існуючих
+    existingData.push(...actions);
+    
+    // Записуємо оновлені дані назад в файл
+    fs.writeFile('CursorMovement.json', JSON.stringify(existingData, null, 2), 'utf8', (err) => {
+      if (err) {
+        console.error('Помилка запису файлу:', err);
+        return;
+      }
+      console.log('Дані успішно записано в CursorMovement.json');
+      res.status(200).json({ message: 'Дані успішно збережено' });
+    });
+  });
+});
+// Роут для віддачі даних руху курсора
+app.get('/api/get-cursor-data', (req, res) => {
+  fs.readFile('CursorMovement.json', 'utf8', (err, data) => {
+      if (err) {
+          console.error('Помилка читання файлу CursorMovement.json:', err);
+          return res.status(500).send({ message: 'Не вдалося отримати дані руху курсора' });
+      }
+
+      res.status(200).json(JSON.parse(data));
+  });
+});
 // Запуск сервера
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
