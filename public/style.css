@@ -453,34 +453,6 @@ footer {
   color: var(--primary-color);
 }
 
-/* AI Helper Styles */
-.ai-helper {
-  padding: 100px 5%;
-  background-color: var(--bg-color);
-}
-
-.ai-helper-container {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-#ai-input {
-  width: 100%;
-  height: 100px;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 2px solid #ddd;
-  border-radius: 5px;
-  resize: vertical;
-}
-
-#ai-response {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: var(--white);
-  border-radius: 5px;
-  box-shadow: var(--shadow);
-}
 
 /* Working Hours Styles */
 .working-hours {

@@ -370,3 +370,5 @@ setInterval(sendUserActionsToServer, 30000);
   }
 
   loadAndVisualize();
+
+  
