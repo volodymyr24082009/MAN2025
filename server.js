@@ -1,8 +1,73 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const bodyParser = require("body-parser");
 const app = express();
 const port = 3001;
+
+//Відправлення заявок:
+
+// Збільшення ліміту розміру запиту
+app.use(bodyParser.json({ limit: "10mb" }));
+app.use(bodyParser.urlencoded({ limit: "10mb", extended: true }));
+
+const APPLICATION_FILE = "application.json";
+
+// Функція для читання заявок із файлу
+const readApplications = () => {
+  if (!fs.existsSync(APPLICATION_FILE)) {
+    return [];
+  }
+  const data = fs.readFileSync(APPLICATION_FILE, "utf-8");
+  return JSON.parse(data || "[]");
+};
+
+// Функція для запису заявок у файл
+const writeApplications = (applications) => {
+  fs.writeFileSync(APPLICATION_FILE, JSON.stringify(applications, null, 2));
+};
+
+// Обробка POST-запиту для отримання заявки
+app.post("/api/submit-request", (req, res) => {
+  const formData = req.body;
+  const applications = readApplications();
+
+  // Додаємо нову заявку
+  const newApplication = {
+    id: Date.now(), // Унікальний ідентифікатор заявки
+    ...formData,
+    completed: false, // Стан виконання заявки
+  };
+
+  applications.push(newApplication);
+  writeApplications(applications);
+
+  res.status(200).json({ message: "Заявка успішно збережена!", application: newApplication });
+});
+
+// Обробка GET-запиту для отримання всіх заявок
+app.get("/api/applications", (req, res) => {
+  const applications = readApplications();
+  res.status(200).json(applications);
+});
+
+// Обробка PATCH-запиту для оновлення стану заявки
+app.patch("/api/applications/:id", (req, res) => {
+  const { id } = req.params;
+  const { completed } = req.body;
+
+  let applications = readApplications();
+  const applicationIndex = applications.findIndex((app) => app.id === parseInt(id));
+
+  if (applicationIndex !== -1) {
+    applications[applicationIndex].completed = completed;
+    writeApplications(applications);
+    res.status(200).json({ message: "Заявка оновлена!", application: applications[applicationIndex] });
+  } else {
+    res.status(404).json({ message: "Заявка не знайдена!" });
+  }
+});
+//Кінець кодуз заявками
 
 // Ініціалізація JSON-файлів
 const initializeFile = (fileName) => {

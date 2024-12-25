@@ -371,4 +371,74 @@ setInterval(sendUserActionsToServer, 30000);
 
   loadAndVisualize();
 
+  //Заявки відправлення: 
+  if (contactForm) {
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+  
+      const formData = new FormData(contactForm);
+      const data = Object.fromEntries(formData.entries());
+  
+      try {
+        const response = await fetch("/api/submit-request", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
+  
+        if (response.ok) {
+          alert("Заявка успішно відправлена!");
+          contactForm.reset();
+        } else {
+          alert("Сталася помилка при відправці заявки.");
+        }
+      } catch (error) {
+        console.error("Помилка:", error);
+      }
+    });
+  }
+  
+  // Відображення заявок та оновлення статусу
+  async function fetchApplications() {
+    try {
+      const response = await fetch("/api/applications");
+      if (response.ok) {
+        const applications = await response.json();
+        const applicationList = document.getElementById("applicationList");
+  
+        applicationList.innerHTML = ""; // Очищення старого списку
+  
+        applications.forEach((app, index) => {
+          const listItem = document.createElement("li");
+          listItem.textContent = `${app.name} - ${app.email} (${app.completed ? "Виконано" : "Невиконано"})`;
+  
+          const toggleButton = document.createElement("button");
+          toggleButton.textContent = app.completed ? "Позначити як невиконане" : "Позначити як виконане";
+          toggleButton.addEventListener("click", async () => {
+            await fetch(`/api/update-application/${index}`, {
+              method: "PUT",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ completed: !app.completed }),
+            });
+            fetchApplications(); // Оновлення списку після зміни статусу
+          });
+  
+          listItem.appendChild(toggleButton);
+          applicationList.appendChild(listItem);
+        });
+      } else {
+        console.error("Не вдалося отримати заявки.");
+      }
+    } catch (error) {
+      console.error("Помилка завантаження заявок:", error);
+    }
+  }
+  
+  // Виклик функції для завантаження заявок
+  fetchApplications();
+  
   
