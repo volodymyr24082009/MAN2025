@@ -2231,5 +2231,411 @@
     "url": "/api/track-actions",
     "ip": "::1",
     "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-25T17:31:53.778Z",
+    "method": "GET",
+    "url": "/favicon.ico",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-25T17:31:59.414Z",
+    "method": "GET",
+    "url": "/api/get-cursor-data",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-25T17:32:30.034Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-25T17:33:00.034Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-25T17:33:25.863Z",
+    "method": "GET",
+    "url": "/api/get-cursor-data",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-25T17:33:56.038Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-25T17:34:26.029Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-25T17:34:56.025Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-25T17:35:05.820Z",
+    "method": "GET",
+    "url": "/api/get-cursor-data",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-25T17:35:36.023Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-25T17:36:05.822Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-25T17:36:36.026Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-25T17:37:06.038Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-25T17:38:26.040Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-25T17:39:26.036Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-25T17:40:26.032Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-25T17:41:13.049Z",
+    "method": "GET",
+    "url": "/api/get-cursor-data",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-25T17:41:44.031Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-25T17:42:14.027Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-25T17:42:44.034Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:05:28.878Z",
+    "method": "GET",
+    "url": "/favicon.ico",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:05:36.594Z",
+    "method": "GET",
+    "url": "/api/get-cursor-data",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:05:51.536Z",
+    "method": "GET",
+    "url": "/api/get-cursor-data",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:06:22.189Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:06:52.186Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:07:06.844Z",
+    "method": "GET",
+    "url": "/api/get-cursor-data",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:07:23.084Z",
+    "method": "GET",
+    "url": "/api/get-cursor-data",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:07:38.068Z",
+    "method": "GET",
+    "url": "/api/get-cursor-data",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:07:42.462Z",
+    "method": "GET",
+    "url": "/api/get-cursor-data",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:08:13.179Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:08:35.339Z",
+    "method": "GET",
+    "url": "/api/get-cursor-data",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:09:06.187Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:09:16.629Z",
+    "method": "GET",
+    "url": "/api/get-cursor-data",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:09:47.174Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:10:17.186Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:10:47.189Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:11:17.178Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:12:02.180Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:12:24.543Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:12:47.183Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:12:51.241Z",
+    "method": "GET",
+    "url": "/public/assets/profile-icon.png",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:12:51.252Z",
+    "method": "GET",
+    "url": "/api/get-cursor-data",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:13:09.769Z",
+    "method": "GET",
+    "url": "/public/assets/profile-icon.png",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:13:09.788Z",
+    "method": "GET",
+    "url": "/api/get-cursor-data",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:13:40.189Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:14:10.184Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:14:30.549Z",
+    "method": "GET",
+    "url": "/assets/profile-icon.png",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:14:30.559Z",
+    "method": "GET",
+    "url": "/api/get-cursor-data",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:14:32.019Z",
+    "method": "GET",
+    "url": "/public/profile/profile.html",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:15:30.640Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:16:01.181Z",
+    "method": "POST",
+    "url": "/api/track-actions",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:16:02.385Z",
+    "method": "GET",
+    "url": "/assets/profile-icon.png",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:16:02.402Z",
+    "method": "GET",
+    "url": "/api/get-cursor-data",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:16:03.495Z",
+    "method": "GET",
+    "url": "/assets/profile-icon.png",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:16:03.503Z",
+    "method": "GET",
+    "url": "/api/get-cursor-data",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:18:43.978Z",
+    "method": "GET",
+    "url": "/assets/profile-icon.png",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T09:18:43.996Z",
+    "method": "GET",
+    "url": "/api/get-cursor-data",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2024-12-26T19:40:24.645Z",
+    "method": "GET",
+    "url": "/favicon.ico",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
   }
 ]

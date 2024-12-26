@@ -287,158 +287,167 @@ window.onload = function () {
 let userActions = []; // Масив для зберігання рухів і взаємодій користувача
 
 // Відслідковуємо рух курсора
-document.addEventListener('mousemove', (event) => {
-    let mouseX = event.clientX;
-    let mouseY = event.clientY;
-    
-    // Зберігаємо дані про рух
-    userActions.push({ type: 'mousemove', x: mouseX, y: mouseY, timestamp: new Date() });
+document.addEventListener("mousemove", (event) => {
+  let mouseX = event.clientX;
+  let mouseY = event.clientY;
+
+  // Зберігаємо дані про рух
+  userActions.push({
+    type: "mousemove",
+    x: mouseX,
+    y: mouseY,
+    timestamp: new Date(),
+  });
 });
 
 // Відслідковуємо кліки по елементах
-document.addEventListener('click', (event) => {
-    let element = event.target;
-    userActions.push({
-        type: 'click',
-        element: element.tagName,
-        id: element.id,
-        class: element.className,
-        timestamp: new Date()
-    });
+document.addEventListener("click", (event) => {
+  let element = event.target;
+  userActions.push({
+    type: "click",
+    element: element.tagName,
+    id: element.id,
+    class: element.className,
+    timestamp: new Date(),
+  });
 });
 
 // Функція для відправки зібраних даних на сервер
 function sendUserActionsToServer() {
-    fetch('/api/track-actions', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ actions: userActions }),
-    })
-    .then(response => response.json())
-    .then(data => console.log('Дані на сервері:', data))
-    .catch(error => console.error('Помилка:', error));
+  fetch("/api/track-actions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ actions: userActions }),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log("Дані на сервері:", data))
+    .catch((error) => console.error("Помилка:", error));
 }
 
 // Відправляти дані на сервер кожні 30 секунд
 setInterval(sendUserActionsToServer, 30000);
-     // Функція для отримання даних з сервера
-     async function fetchCursorData() {
-      const response = await fetch('/api/get-cursor-data');
-      const data = await response.json();
-      return data;
-  }
+// Функція для отримання даних з сервера
+async function fetchCursorData() {
+  const response = await fetch("/api/get-cursor-data");
+  const data = await response.json();
+  return data;
+}
 
-  // Створення графіка руху курсора
-  function createCursorChart(data) {
-      const ctx = document.getElementById('cursorMovementChart').getContext('2d');
-      
-      // Мапуємо дані у формат, який Chart.js розуміє
-      const coordinates = data.map(d => ({ x: d.x, y: d.y }));
+// Створення графіка руху курсора
+function createCursorChart(data) {
+  const ctx = document.getElementById("cursorMovementChart").getContext("2d");
 
-      new Chart(ctx, {
-          type: 'scatter',
-          data: {
-              datasets: [{
-                  label: 'Рух курсора',
-                  data: coordinates,
-                  backgroundColor: 'rgba(75, 192, 192, 1)',
-                  borderColor: 'rgba(75, 192, 192, 1)',
-                  borderWidth: 1
-              }]
-          },
-          options: {
-              scales: {
-                  x: {
-                      type: 'linear',
-                      position: 'bottom'
-                  },
-                  y: {
-                      type: 'linear',
-                      position: 'left'
-                  }
-              }
-          }
-      });
-  }
+  // Мапуємо дані у формат, який Chart.js розуміє
+  const coordinates = data.map((d) => ({ x: d.x, y: d.y }));
 
-  // Завантаження та візуалізація даних
-  async function loadAndVisualize() {
-      const data = await fetchCursorData();
-      createCursorChart(data);
-  }
+  new Chart(ctx, {
+    type: "scatter",
+    data: {
+      datasets: [
+        {
+          label: "Рух курсора",
+          data: coordinates,
+          backgroundColor: "rgba(75, 192, 192, 1)",
+          borderColor: "rgba(75, 192, 192, 1)",
+          borderWidth: 1,
+        },
+      ],
+    },
+    options: {
+      scales: {
+        x: {
+          type: "linear",
+          position: "bottom",
+        },
+        y: {
+          type: "linear",
+          position: "left",
+        },
+      },
+    },
+  });
+}
 
-  loadAndVisualize();
+// Завантаження та візуалізація даних
+async function loadAndVisualize() {
+  const data = await fetchCursorData();
+  createCursorChart(data);
+}
 
-  //Заявки відправлення: 
-  if (contactForm) {
-    contactForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
-  
-      const formData = new FormData(contactForm);
-      const data = Object.fromEntries(formData.entries());
-  
-      try {
-        const response = await fetch("/api/submit-request", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        });
-  
-        if (response.ok) {
-          alert("Заявка успішно відправлена!");
-          contactForm.reset();
-        } else {
-          alert("Сталася помилка при відправці заявки.");
-        }
-      } catch (error) {
-        console.error("Помилка:", error);
-      }
-    });
-  }
-  
-  // Відображення заявок та оновлення статусу
-  async function fetchApplications() {
+loadAndVisualize();
+
+//Заявки відправлення:
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(contactForm);
+    const data = Object.fromEntries(formData.entries());
+
     try {
-      const response = await fetch("/api/applications");
+      const response = await fetch("/api/submit-request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
       if (response.ok) {
-        const applications = await response.json();
-        const applicationList = document.getElementById("applicationList");
-  
-        applicationList.innerHTML = ""; // Очищення старого списку
-  
-        applications.forEach((app, index) => {
-          const listItem = document.createElement("li");
-          listItem.textContent = `${app.name} - ${app.email} (${app.completed ? "Виконано" : "Невиконано"})`;
-  
-          const toggleButton = document.createElement("button");
-          toggleButton.textContent = app.completed ? "Позначити як невиконане" : "Позначити як виконане";
-          toggleButton.addEventListener("click", async () => {
-            await fetch(`/api/update-application/${index}`, {
-              method: "PUT",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({ completed: !app.completed }),
-            });
-            fetchApplications(); // Оновлення списку після зміни статусу
-          });
-  
-          listItem.appendChild(toggleButton);
-          applicationList.appendChild(listItem);
-        });
+        alert("Заявка успішно відправлена!");
+        contactForm.reset();
       } else {
-        console.error("Не вдалося отримати заявки.");
+        alert("Сталася помилка при відправці заявки.");
       }
     } catch (error) {
-      console.error("Помилка завантаження заявок:", error);
+      console.error("Помилка:", error);
     }
+  });
+}
+
+// Відображення заявок та оновлення статусу
+async function fetchApplications() {
+  try {
+    const response = await fetch("/api/applications");
+    if (response.ok) {
+      const applications = await response.json();
+      const applicationList = document.getElementById("applicationList");
+
+      applicationList.innerHTML = ""; // Очищення старого списку
+
+      applications.forEach((app, index) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = `${app.name} - ${app.email} (${
+          app.completed ? "Виконано" : "Невиконано"
+        })`;
+
+        const toggleButton = document.createElement("button");
+        toggleButton.textContent = app.completed
+          ? "Позначити як невиконане"
+          : "Позначити як виконане";
+        toggleButton.addEventListener("click", async () => {
+          await fetch(`/api/update-application/${index}`, {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ completed: !app.completed }),
+          });
+          fetchApplications(); // Оновлення списку після зміни статусу
+        });
+
+        listItem.appendChild(toggleButton);
+        applicationList.appendChild(listItem);
+      });
+    } else {
+      console.error("Не вдалося отримати заявки.");
+    }
+  } catch (error) {
+    console.error("Помилка завантаження заявок:", error);
   }
-  
-  // Виклик функції для завантаження заявок
-  fetchApplications();
-  
-  
+}
+
+// Виклик функції для завантаження заявок
+fetchApplications();
